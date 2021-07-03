@@ -61,7 +61,7 @@ function App() {
 
 	const handleClear = () => {
 		setAns("0");
-		setFinalAns(0)
+		// setFinalAns(0)
 	}
 
 	const handleEvaluation = () => {
@@ -126,9 +126,9 @@ function App() {
 			</h1>
 			<div className='navbar'>
 				<div>
-					<label class="switch">
+					<label className="switch">
 						<input type="checkbox" value={theme} onChange={() => handleThemeChange()} />
-						<span class="slider round"></span>
+						<span className="slider round"></span>
 					</label>
 				</div>
 			</div>
@@ -159,7 +159,7 @@ function App() {
 					<CreateButton val='3' data='3' action={handleChange} />
 					<OperationButton action={handleChange} data='-' />
 					<br />
-					<OperationButton data='.' />
+					<OperationButton action={handleChange} data='.' />
 					<CreateButton val='0' data='0' action={handleChange} />
 					<OperationButton data='=' action={handleEvaluation} class="equalBtn" />
 					<OperationButton action={handleChange} data='+' />
@@ -167,6 +167,10 @@ function App() {
 					<OperationButton action={handleChange} data='**' />
 				</div>
 			</div>
+			<footer>
+				Copyright @2021,
+				Shubham Jindal
+			</footer>
 		</div>
 	);
 }
